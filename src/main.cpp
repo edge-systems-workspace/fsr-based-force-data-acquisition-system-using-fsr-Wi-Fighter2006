@@ -38,5 +38,12 @@ void loop() {
     Serial.print("Raw ADC Value: ");
     Serial.println(fsrValue);
 
-    delay(500);
+    // Threshold-based pressure detection
+    if (fsrValue > PRESSURE_THRESHOLD) {
+        Serial.println("Pressure Detected!");
+    } else {
+        Serial.println("No Significant Pressure.");
+    }
+
+    delay(500);  // Delay for readability
 }
