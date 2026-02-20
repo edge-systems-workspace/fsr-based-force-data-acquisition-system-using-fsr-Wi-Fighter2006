@@ -22,8 +22,10 @@ int fsrValue = 0;    // Variable to store raw ADC value
 
 void setup() {
 
-    // Initialize Serial communication at 9600 baud
     Serial.begin(9600);
+
+    // Print system initialization banner
+    Serial.println("=== FSR Force Measurement System Initialized ===");
 }
 
 
