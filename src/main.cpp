@@ -30,4 +30,13 @@ void setup() {
 
 
 void loop() {
+
+    // Read analog value from FSR
+    fsrValue = analogRead(FSR_PIN);
+
+    // Print raw ADC value
+    Serial.print("Raw ADC Value: ");
+    Serial.println(fsrValue);
+
+    delay(500);
 }
